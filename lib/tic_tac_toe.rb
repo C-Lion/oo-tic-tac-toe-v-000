@@ -23,8 +23,8 @@ class TicTacToe
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
   
-  def input_to_string
-    gets.
+  def input_to_string(position)
+    index = position - 1
   end
   
 end
