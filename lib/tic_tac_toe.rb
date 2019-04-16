@@ -1,5 +1,6 @@
 class TicTacToe
   def initialize
+    #sets an @board variable equal to a new, empty array of 9 positions. 
     @board = Array.new(9, " ") 
   end
   
