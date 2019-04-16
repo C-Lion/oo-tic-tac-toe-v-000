@@ -97,7 +97,9 @@ class TicTacToe
       #if no winner, then this IF is falsey, so winner() returns nil. 
       #If won? is true, board[won?(board)[0]] (if there WAS a winner) 
       @board[won?[0]]
+    end
   end
-end
+  
+  
  
 end
