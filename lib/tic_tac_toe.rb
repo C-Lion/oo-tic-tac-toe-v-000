@@ -79,7 +79,10 @@ class TicTacToe
     @board.all? do |position|
       position == "X" || position == "O" 
     end
- end
+  end
  
+  def draw?
+    full? && !won?
+  end
  
 end
