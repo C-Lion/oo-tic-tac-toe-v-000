@@ -40,9 +40,9 @@ class TicTacToe
   end
   
   def turn(board)
-  puts "Please enter 1-9:"
-  user_input = gets.strip
-  index = input_to_index(user_input)
+    puts "Please enter 1-9:"
+    user_input = gets.strip
+    index = input_to_index(user_input)
   
     if valid_move?(index)
       token = current_player
@@ -54,13 +54,17 @@ class TicTacToe
   end 
   
   def turn_count
-  turn_count = 0 
-  @board.each do |position|
-    if position == "X" || position == "O"
-      turn_count += 1 
+    turn_count = 0 
+    @board.each do |position|
+      if position == "X" || position == "O"
+        turn_count += 1 
+      end
     end
+    turn_count  
   end
-  turn_count  
-end
+  
+  def current_player(board)
+    turn_count(board).even? ?  "X" :  "O"
+  end
   
 end
