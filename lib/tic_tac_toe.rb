@@ -67,5 +67,13 @@ class TicTacToe
     end
   end 
   
+  def won?
+    WIN_COMBINATIONS.detect do |winning_combo|
+      #winning_combo could be [0, 1, 2], [3, 4, 5]...
+      (@board[winning_combo[0]] == @board[winning_combo[1]]) && 
+        (@board[winning_combo[1]] == @board[winning_combo[2]]) && (@board[winning_combo[0]] != " ")
+    end
+  end
+  
   
 end
